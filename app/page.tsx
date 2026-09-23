@@ -3,7 +3,7 @@ import { PROFILE } from "@/lib/profile";
 
 export default function Home() {
   return (
-    <section className="flex flex-1 items-center">
+    <section className="flex flex-1 items-center py-16 sm:py-20">
       <div className="mx-auto w-full max-w-3xl px-6">
         <div className="glass glass-card flex flex-col gap-6">
           <div>

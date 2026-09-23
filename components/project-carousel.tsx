@@ -5,7 +5,7 @@ import { ProjectCard } from "@/components/project-card";
 import type { Project } from "@/lib/projects";
 
 const navButtonClass =
-  "glass-bar rounded-full border border-slate-700 p-2.5 text-white transition hover:bg-slate-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60";
+  "glass-bar cursor-pointer rounded-full border border-slate-700 p-2.5 text-white transition hover:bg-slate-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60";
 
 export function ProjectCarousel({ projects }: { projects: Project[] }) {
   const [index, setIndex] = useState(0);
@@ -57,7 +57,7 @@ export function ProjectCarousel({ projects }: { projects: Project[] }) {
               onClick={() => goTo(i)}
               aria-label={`Aller au projet ${project.title}`}
               aria-current={i === index}
-              className={`h-2 rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 ${
+              className={`h-2 cursor-pointer rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 ${
                 i === index ? "w-6 bg-white" : "w-2 bg-slate-600 hover:bg-slate-500"
               }`}
             />
