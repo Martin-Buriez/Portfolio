@@ -5,7 +5,7 @@ import { ProjectCard } from "@/components/project-card";
 import type { Project } from "@/lib/projects";
 
 const navButtonClass =
-  "glass-bar rounded-full border border-slate-700 p-2.5 text-white transition hover:bg-slate-700";
+  "glass-bar rounded-full border border-slate-700 p-2.5 text-white transition hover:bg-slate-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60";
 
 export function ProjectCarousel({ projects }: { projects: Project[] }) {
   const [index, setIndex] = useState(0);
@@ -47,9 +47,9 @@ export function ProjectCarousel({ projects }: { projects: Project[] }) {
           aria-label="Projet précédent"
           className={navButtonClass}
         >
-          ←
+          <ChevronIcon className="rotate-180" />
         </button>
-        <div className="flex gap-2">
+        <div className="flex items-center gap-2">
           {projects.map((project, i) => (
             <button
               key={project.id}
@@ -57,8 +57,8 @@ export function ProjectCarousel({ projects }: { projects: Project[] }) {
               onClick={() => goTo(i)}
               aria-label={`Aller au projet ${project.title}`}
               aria-current={i === index}
-              className={`h-2 w-2 rounded-full transition ${
-                i === index ? "bg-white" : "bg-slate-600"
+              className={`h-2 rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 ${
+                i === index ? "w-6 bg-white" : "w-2 bg-slate-600 hover:bg-slate-500"
               }`}
             />
           ))}
@@ -69,9 +69,23 @@ export function ProjectCarousel({ projects }: { projects: Project[] }) {
           aria-label="Projet suivant"
           className={navButtonClass}
         >
-          →
+          <ChevronIcon />
         </button>
       </div>
     </div>
+  );
+}
+
+function ChevronIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={`h-4 w-4 ${className}`} aria-hidden="true">
+      <polyline
+        points="9 6, 15 12, 9 18"
+        stroke="currentColor"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
   );
 }

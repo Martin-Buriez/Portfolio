@@ -18,6 +18,7 @@ export const experiences: Experience[] = [
       "Optimisations de performance : cache Redis, cache HTTP.",
       "Tests E2E et tests de charge (Jest, K6), monitoring Grafana et logs OpenSearch.",
       "Optimisation des pipelines GitLab CI et des images Docker.",
+      "Review de code, participations aux weeklys et points de synchro inter-équipes.",
     ],
   },
   {
@@ -30,6 +31,8 @@ export const experiences: Experience[] = [
       "Structuration d'un monorepo NX pour centraliser les middlewares et sécuriser les dépendances.",
       "Batchs de nettoyage de données et outils d'amélioration de la qualité des données (Node.js / PostgreSQL).",
       "Optimisation des performances backend : réduction de la latence et de la consommation mémoire.",
+      "Maintenance évolutive des APIs existantes : correctifs, ajouts de fonctionnalités.",
+      "Participation active à la vie de l'équipe agile : rituels SCRUM, support technique.",
     ],
   },
   {
@@ -42,6 +45,8 @@ export const experiences: Experience[] = [
       "Création de librairies internes : erreurs, permissions, logs, appels HTTP, qualité de code.",
       "Réécriture de 5 API vers le nouveau socle technique (NodeJS / PostgreSQL).",
       "Mise en place de la chaîne CI/CD : GitLab, Docker, Kubernetes, déploiement sur Azure.",
+      "Amélioration et maintenance d'APIs, ajout de fonctionnalités, optimisations.",
+      "Maintenance et amélioration d'un frontend utilisé par le Call Center.",
     ],
   },
   {
